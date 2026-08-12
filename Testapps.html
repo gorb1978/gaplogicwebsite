@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications | GapLogic</title>
+    <style>
+        :root { --bg-dark: #020617; --bg-card: #0f172a; --text-main: #f8fafc; --text-muted: #94a3b8; --accent-blue: #0ea5e9; --accent-teal: #14b8a6; --gradient-primary: linear-gradient(135deg, var(--accent-blue), var(--accent-teal)); }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .logo img { height: 48px; width: auto; object-fit: contain; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 32px; font-weight: 500; transition: color 0.2s ease; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-main); }
+        
+        .page-header { padding: 60px 0; text-align: center; }
+        .app-detail { padding: 60px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .app-header { display: flex; align-items: center; gap: 32px; margin-bottom: 40px; }
+        .app-header img { width: 120px; height: 120px; border-radius: 24px; }
+        .content-box { background: var(--bg-card); padding: 32px; border-radius: 20px; margin-bottom: 24px; }
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .badge { display: inline-block; padding: 6px 12px; background: var(--accent-teal); color: var(--bg-dark); border-radius: 6px; font-weight: 700; margin-bottom: 16px; }
+        .btn { display: inline-block; background: var(--text-main); color: var(--bg-dark); padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 20px; }
+        
+        /* List Styling */
+        .feature-list { list-style-type: none; }
+        .feature-list li { position: relative; padding-left: 24px; margin-bottom: 12px; color: var(--text-muted); }
+        .feature-list li::before { content: "•"; color: var(--accent-blue); font-size: 1.5rem; position: absolute; left: 0; top: -4px; }
+        
+        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        @media (max-width: 768px) { .app-header { flex-direction: column; text-align: center; } .features-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo"><img src="splash_logo.png" alt="GapLogic Software Studio Logo"></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="apps.html" class="active">Applications</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </nav>
+
+        <section class="page-header"><h1>Our Software Portfolio</h1></section>
+
+        <!-- GapMed -->
+        <section class="app-detail" id="gapmed">
+            <div class="app-header"><img src="Gap Med App Icon.png" alt="GapMed"><div><h2>GapMed: Offline Pill Reminder</h2><div class="badge">Free ($2.99 Pro IAP)</div></div></div>
+            <div class="content-box"><h3>Core Philosophy</h3><p>GapMed is a premium medical scheduling utility designed to do exactly what it says: remind you to take your pills, reliably and securely. Built by GapLogic, GapMed keeps your health data locally on your device with ZERO internet permissions. Whether you need a daily vitamin tracker or a complex prescription schedule, GapMed delivers peace of mind without the bloat.</p></div>
+            <div class="features-grid">
+                <div class="content-box"><h3>Free Features</h3><ul class="feature-list"><li>Reliable Push Notifications: Alarms fire perfectly even if the app is closed.</li><li>Smart Timezone Travel: Automatically adjusts reminders when traveling.</li><li>Medical History Archive: Keep a visual history ready for doctor visits.</li><li>Inventory Tracking: Set low-pill warnings to trigger pharmacy refills.</li><li>True OLED Dark Mode: Beautiful, high-contrast interfaces.</li></ul></div>
+                <div class="content-box"><h3>GapMed Pro ($2.99)</h3><ul class="feature-list"><li>Unlimited Medications: Track infinite prescriptions, vitamins, and supplements.</li><li>Multi-Family Profiles: Completely isolated dashboards for family or pets.</li><li>Premium Custom Alarms: Distinct sounds to easily differentiate alerts.</li><li>Pay Once, Own Forever: Absolutely no monthly subscriptions.</li></ul></div>
+            </div>
+            <div style="text-align: center; margin-bottom: 24px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/592kIqdtFIo" title="GapMed App Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px; max-width: 100%;"></iframe>
+            </div>
+            <div style="text-align: center;"><a href="https://play.google.com/store/apps/details?id=com.gaplogic.gapmed" class="btn" target="_blank" rel="noopener noreferrer">Download on Google Play</a></div>
+        </section>
+
+        <!-- GapVitals -->
+        <section class="app-detail" id="gapvitals">
+            <div class="app-header"><img src="Body Log App Icon.png" alt="GapVitals"><div><h2>GapVitals: Health Tracker</h2><div class="badge">Free (Modular Upgrades $0.99–$5.99)</div></div></div>
+            <div class="content-box"><h3>Core Philosophy</h3><p>GapVitals is the ultimate privacy-first health companion. Because your medical data is highly sensitive, the app has NO internet permission. All data lives in a local SQLite database directly on your device. It cannot be accessed, seen, or transmitted by anyone—including us.</p></div>
+            <div class="features-grid">
+                <div class="content-box"><h3>Free Features</h3><ul class="feature-list"><li>Track essential daily metrics with a clean, simple interface.</li><li>7-day rolling window history for all logged vitals.</li><li>1 customizable daily reminder to check your stats.</li><li>Global unit support for Weight and Glucose preferences.</li></ul></div>
+                <div class="content-box"><h3>GapVitals Full Unlock ($5.99)</h3><ul class="feature-list"><li>Heart Rate & SpO2 Module ($0.99): Dedicated cardiovascular logging.</li><li>Sleep Tracker Module ($0.99): Detailed rest and recovery metrics.</li><li>Nutrition Module ($1.99): Comprehensive daily dietary logging.</li><li>Pro Lifetime ($5.99): Unlocks all current modules and removes the 7-day limit.</li></ul></div>
+            </div>
+            <div style="text-align: center;"><a href="#" class="btn">Download on Google Play</a></div>
+        </section>
+
+        <!-- GapCalc -->
+        <section class="app-detail" id="gapcalc">
+            <div class="app-header"><img src="Gap Calc App Icon.png" alt="GapCalc"><div><h2>GapCalc: The Privacy-First Calculator</h2><div class="badge">Free ($3.99 Pro IAP)</div></div></div>
+            <div class="content-box"><h3>Core Philosophy</h3><p>GapCalc delivers a lightning-fast, highly responsive mathematics experience with absolutely zero bloat, zero tracking, and zero ads. Whether you need a standard everyday calculator, a scientific calculator for complex equations, or a visual history tape, GapCalc is designed to respect your device and your data. Your math is your business.</p></div>
+            <div class="features-grid">
+                <div class="content-box"><h3>Free Features</h3><ul class="feature-list"><li>Standard & Scientific Calculator: A clean, intuitive keypad.</li><li>Visual History Tape: Review past calculations and swipe-to-delete.</li><li>100% Offline & Private: No network permissions required whatsoever.</li><li>True Dark & Light Mode: High-contrast, battery-saving OLED themes.</li></ul></div>
+                <div class="content-box"><h3>GapCalc Pro ($3.99)</h3><ul class="feature-list"><li>Fraction & Carpentry Calculator: Easily add, subtract, and divide mixed fractions.</li><li>Universal Unit Converter: Instantly convert length, weight, volume, and temperature.</li><li>Everyday Financial Tools: Quickly calculate tips, split bills, and discount savings.</li><li>Pay once, own forever.</li></ul></div>
+            </div>
+            <div style="text-align: center;"><a href="#" class="btn">Download on Google Play</a></div>
+        </section>
+
+        <!-- GapRegister -->
+        <section class="app-detail" id="gapregister">
+            <div class="app-header"><img src="Gap Register App Icon.png" alt="GapRegister"><div><h2>GapRegister: Offline Checkbook</h2><div class="badge">Free ($3.99 Pro IAP)</div></div></div>
+            <div class="content-box"><h3>Core Philosophy</h3><p>GapRegister is the simple, privacy-first way to track where your money goes. PocketLedger has NO internet permission. All data lives in a local SQLite database on your device. It cannot be accessed, seen, or transmitted by anyone—including us.</p></div>
+            <div class="features-grid">
+                <div class="content-box"><h3>Free Features</h3><ul class="feature-list"><li>Log income and expenses in 3 taps.</li><li>20 pre-loaded categories plus custom options.</li><li>Current month balance tracking and net position.</li><li>Light mode and True OLED Dark mode.</li></ul></div>
+                <div class="content-box"><h3>GapRegister Pro ($3.99)</h3><ul class="feature-list"><li>24 months of full transaction history.</li><li>Spending trend charts (income vs. expenses).</li><li>Recurring transactions for auto-logging fixed bills.</li><li>CSV export capabilities for spreadsheets.</li></ul></div>
+            </div>
+            <div style="text-align: center;"><a href="#" class="btn">Download on Google Play</a></div>
+        </section>
+
+        <!-- Gap Journal -->
+        <section class="app-detail" id="gapjournal">
+            <div class="app-header"><img src="Gap Journal App Icon.png" alt="Gap Journal"><div><h2>GapJournal: Sleep Tracker</h2><div class="badge">Free ($4.99 Pro IAP)</div></div></div>
+            <div class="content-box"><h3>Core Philosophy</h3><p>GapJournal is the ultimate privacy-first sleep tracker based on the clinical Consensus Sleep Diary (CSD) framework. It provides medical-grade sleep tracking without compromising your digital privacy. There is absolutely no internet permission required. Your personal health data stays securely locked in a local database on your device.</p></div>
+            <div class="features-grid">
+                <div class="content-box"><h3>Free Features</h3><ul class="feature-list"><li>Sleep Onset Latency & Wake After Sleep Onset tracking.</li><li>Automatic Sleep Efficiency Calculation.</li><li>7-Day Trend Charts for Efficiency and WASO.</li><li>Shift-worker friendly support for daytime naps.</li></ul></div>
+                <div class="content-box"><h3>GapJournal Pro ($4.99)</h3><ul class="feature-list"><li>Unlimited History & 30-Day Deep Trends.</li><li>Sleep Debt Tracker for cumulative deficits.</li><li>Color-Coded Monthly Sleep Calendar.</li><li>Private Dream Journal & text notes.</li><li>Lifestyle Correlations (Caffeine, Alcohol, Screen Time).</li><li>PDF Health Record & CSV Export.</li></ul></div>
+            </div>
+            <div style="text-align: center;"><a href="#" class="btn">Download on Google Play</a></div>
+        </section>
+
+        <!-- GapBudget -->
+        <section class="app-detail" id="gapbudget">
+            <div class="app-header"><img src="Gap Budget App Icon.png" alt="GapBudget"><div><h2>GapBudget: Daily Expenses</h2><div class="badge">Free ($4.99 Pro IAP)</div></div></div>
+            <div class="content-box"><h3>Core Philosophy</h3><p>GapBudget brings the proven "cash stuffing" envelope method right to your pocket. Every dollar gets a job before you spend it. GapBudget has NO internet permission, ensuring your financial data is stored in a highly encrypted local SQLite database exclusively on your device. We never collect, transmit, or sell any data.</p></div>
+            <div class="features-grid">
+                <div class="content-box"><h3>Free Features</h3><ul class="feature-list"><li>Unlimited Envelope Categories.</li><li>Lightning-Fast Expense Tracker (≤3 taps).</li><li>Visual Spending Bars with overdraft warnings.</li><li>Current month running totals tracking.</li><li>Global Text Scaling (up to 200%).</li></ul></div>
+                <div class="content-box"><h3>GapBudget Pro ($4.99)</h3><ul class="feature-list"><li>24-Month Financial History.</li><li>Spending Trend & Per-Envelope Analytics Charts.</li><li>Recurring Transactions for automated budgets.</li><li>Roll-Over Balances to build savings month-to-month.</li><li>Multiple Budget Ledgers (Personal, Business).</li><li>CSV Data Export for accounting.</li></ul></div>
+            </div>
+            <div style="text-align: center;"><a href="#" class="btn">Download on Google Play</a></div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 GapLogic, LLC. All rights reserved.</p>
+            <p>Contact Administration: support@gaplogicsoftware.com</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#0F172A" rx="8"/>
+
+  <g transform="translate(10, 0)">
+    <g transform="translate(20, 35)">
+      <path d="M 65 20 A 45 45 0 1 0 110 65 L 85 65 A 20 20 0 1 1 65 45 Z" fill="#38BDF8" />
+      
+      <path d="M 75 15 L 115 15 L 115 55 L 95 55 L 95 35 L 75 35 Z" fill="#34D399" />
+      
+      <circle cx="65" cy="65" r="6" fill="#F8FAFC" />
+      <circle cx="115" cy="15" r="4" fill="#F8FAFC" />
+      <circle cx="65" cy="20" r="4" fill="#34D399" />
+    </g>
+
+    <text x="170" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="54" font-weight="800" fill="#F8FAFC" letter-spacing="1">GAP</text>
+    
+    <text x="290" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="54" font-weight="300" fill="#38BDF8" letter-spacing="1">LOGIC</text>
+    
+    <text x="172" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="7">SOFTWARE STUDIO</text>
+  </g>
+</svg>
