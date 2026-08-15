@@ -38,6 +38,13 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] Added a "Coming Soon" label above the Download button for every app that
+      still points to the `#` placeholder (GapVitals, GapCalc, GapRegister,
+      GapJournal, GapBudget, GapFluid, GapWater, GapSeizure, GapReintro) — 2026-08-15,
+      Josh's request. GapMed was untouched since it already has a real Play Store
+      link. When any app's placeholder link gets swapped for a real URL, remove its
+      "Coming Soon" `<p>` at the same time — don't leave both.
+
 - [x] GapRegister's `apps.html` header ("Offline Checkbook" → "Income & Expense
       Tracker") and Free Features list (added home-screen widget + font scale
       100%–200%) brought up to date, 2026-08-15 — matches live Play Store listing
