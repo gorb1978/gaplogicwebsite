@@ -16,14 +16,19 @@ start of a session and update it (mark done / add new items) whenever you touch
 - [ ] Swap the `splash_logo.png` placeholder for GapNotes once that app actually
       exists (no folder for it anywhere in `StudioProjects` as of 2026-08-12 — it's
       a pure "coming soon" placeholder card right now).
-- [ ] **GapRegister went live on Play Store 2026-08-14** — its `apps.html` Download
-      button still points to the `#` placeholder. Josh scoped 2026-08-15's fix to
-      naming + feature-list only, so the link update is intentionally still
-      outstanding — get the real Play Store URL from Josh and swap it in.
+- [ ] **GapRegister's Play Store listing is still 404ing** as of 2026-08-15 (checked
+      `https://play.google.com/store/apps/details?id=com.gaplogic.gapregister`
+      directly — still not resolving, propagation after 2026-08-14 approval evidently
+      takes longer than a day). `apps.html`'s Download button still points to `#`.
+      **Re-check the URL next session** — once it resolves, swap the href in.
 - [ ] Update "Download on Google Play" `#` placeholder links to real Play Store URLs
       as each remaining app (GapVitals, GapCalc, GapJournal, GapBudget, GapFluid,
       GapWater, GapSeizure, GapReintro) actually goes live — check each folder's
-      `LAUNCH_CHECKLIST.md` for status before assuming "live."
+      `LAUNCH_CHECKLIST.md` for status before assuming "live." Spot-checked all 8
+      Play Store URLs directly on 2026-08-15 (triggered by GapRegister's launch) —
+      all still 404, none live yet. Worth re-checking periodically rather than only
+      trusting `LAUNCH_CHECKLIST.md` state, since GapRegister's own checklist wasn't
+      necessarily the trigger that caught its go-live either.
 - [ ] Periodically re-sweep each app folder's most recent .md docs (README, HANDOFF,
       TODO, HUMAN_TASKS, SPRINT_HISTORY, STORE_LISTING) against `apps.html` /
       `privacy.html` — app docs update faster than the site, so treat the site as
@@ -38,6 +43,9 @@ start of a session and update it (mark done / add new items) whenever you touch
       100%–200%) brought up to date, 2026-08-15 — matches live Play Store listing
       and the app's own README.md/STORE_LISTING.md. privacy.html and the YouTube
       embed were already correct and untouched.
+- [x] Checked GapRegister's Play Store URL for the Download-button update,
+      2026-08-15 — still 404, so the button was intentionally left as `#` (see Open
+      list above for the re-check task).
 
 ## Notes / decisions to remember
 

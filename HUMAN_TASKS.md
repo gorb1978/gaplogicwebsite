@@ -22,9 +22,11 @@ resolved or a new one comes up.
 - [ ] Decide what **GapNotes** actually is — there's a placeholder "Coming Soon"
       card/section for it on the site now, but no project folder or spec exists for
       it anywhere in `StudioProjects`.
-- [ ] **Send GapRegister's live Play Store URL** so its `apps.html` Download button
-      can be switched from the `#` placeholder to the real link — it went live
-      2026-08-14 but the site button wasn't part of the 2026-08-15 naming/feature fix.
+- [ ] **GapRegister's Play Store listing is still 404ing** as of 2026-08-15 (checked
+      directly, not just assumed) — propagation after the 2026-08-14 approval is
+      taking longer than a day. Once `https://play.google.com/store/apps/details?id=com.gaplogic.gapregister`
+      actually resolves, let Claude know so the `apps.html` Download button can be
+      switched from the `#` placeholder to the real link.
 
 ## Resolved
 
