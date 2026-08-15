@@ -22,9 +22,14 @@ resolved or a new one comes up.
 - [ ] Decide what **GapNotes** actually is — there's a placeholder "Coming Soon"
       card/section for it on the site now, but no project folder or spec exists for
       it anywhere in `StudioProjects`.
+- [ ] **Send GapRegister's live Play Store URL** so its `apps.html` Download button
+      can be switched from the `#` placeholder to the real link — it went live
+      2026-08-14 but the site button wasn't part of the 2026-08-15 naming/feature fix.
 
 ## Resolved
 
 - [x] GapBudget vs ClearBudget naming — confirmed 2026-08-12: site should say
       **GapBudget** (portfolio convention: every app name starts with "Gap"),
       regardless of what the `clearbudget` folder's own internal docs say.
+- [x] GapRegister's `apps.html` naming/feature-list fixed for its 2026-08-14 launch —
+      2026-08-15.

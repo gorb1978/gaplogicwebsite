@@ -16,8 +16,12 @@ start of a session and update it (mark done / add new items) whenever you touch
 - [ ] Swap the `splash_logo.png` placeholder for GapNotes once that app actually
       exists (no folder for it anywhere in `StudioProjects` as of 2026-08-12 — it's
       a pure "coming soon" placeholder card right now).
+- [ ] **GapRegister went live on Play Store 2026-08-14** — its `apps.html` Download
+      button still points to the `#` placeholder. Josh scoped 2026-08-15's fix to
+      naming + feature-list only, so the link update is intentionally still
+      outstanding — get the real Play Store URL from Josh and swap it in.
 - [ ] Update "Download on Google Play" `#` placeholder links to real Play Store URLs
-      as each app (GapVitals, GapCalc, GapRegister, GapJournal, GapBudget, GapFluid,
+      as each remaining app (GapVitals, GapCalc, GapJournal, GapBudget, GapFluid,
       GapWater, GapSeizure, GapReintro) actually goes live — check each folder's
       `LAUNCH_CHECKLIST.md` for status before assuming "live."
 - [ ] Periodically re-sweep each app folder's most recent .md docs (README, HANDOFF,
@@ -26,6 +30,14 @@ start of a session and update it (mark done / add new items) whenever you touch
       the thing that's usually behind unless proven otherwise (verified 2026-08-12,
       found several apps had stale copy: GapCalc, GapRegister, GapJournal all had
       shipped features missing from their site cards).
+
+## Recently resolved
+
+- [x] GapRegister's `apps.html` header ("Offline Checkbook" → "Income & Expense
+      Tracker") and Free Features list (added home-screen widget + font scale
+      100%–200%) brought up to date, 2026-08-15 — matches live Play Store listing
+      and the app's own README.md/STORE_LISTING.md. privacy.html and the YouTube
+      embed were already correct and untouched.
 
 ## Notes / decisions to remember
 
