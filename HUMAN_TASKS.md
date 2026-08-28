@@ -6,16 +6,21 @@ resolved or a new one comes up.
 
 ## Open
 
-- [ ] **Resolve the GitHub account flag.** `gorb1978` is currently flagged and can't
-      authorize third-party OAuth apps, which blocks linking Netlify to
-      `github.com/gorb1978/gaplogicwebsite` for continuous deployment. Contact
-      GitHub Support (support.github.com) to get the flag reviewed/lifted.
-- [ ] **Link Netlify to GitHub** once the flag is resolved: Site configuration →
-      Build & deploy → Link repository → GitHub → `gorb1978/gaplogicwebsite` →
-      branch `main`. Build command blank, publish directory `.`.
-- [ ] Until CD is linked, **manual deploy still required**: drag-and-drop the
+- [ ] **Netlify's auto-deploy-on-push is blocked by an "unrecognized Git
+      contributor" error**, discovered 2026-08-15 during the CD verification test.
+      Netlify's free plan only allows one verified contributor on private repos;
+      the git commit identity (`gorb1978` / `josh.gorby@gaplogicsoftware.com`) isn't
+      recognized as matching your linked GitHub account. Fix by either:
+      (a) Netlify dashboard → Deploys → "manage Git contributors" → link/verify your
+      Git identity, or
+      (b) upgrade to a plan with unlimited private-repo contributors, or
+      (c) make the `gaplogicwebsite` repo public (removes the contributor limit).
+      Until this is fixed, **pushes to `main` will NOT auto-deploy** — see the test
+      evidence in `TODO.md`.
+- [ ] Until the above is fixed, **manual deploy still required**: drag-and-drop the
       `GapLogicWebSite` folder into Netlify after any local edit gets committed —
-      currently editing the git repo does NOT make the live site update by itself.
+      the repo IS now linked to Netlify, but deploys from pushes are being blocked,
+      so this is still the working fallback.
 - [ ] Provide real app icons for **GapSeizure** and **GapReintro** — neither has one
       generated yet anywhere in their project folders. Site currently shows the
       GapLogic splash logo as a placeholder for both.
@@ -35,3 +40,9 @@ resolved or a new one comes up.
       regardless of what the `clearbudget` folder's own internal docs say.
 - [x] GapRegister's `apps.html` naming/feature-list fixed for its 2026-08-14 launch —
       2026-08-15.
+- [x] GitHub account flag lifted and Netlify successfully linked to
+      `github.com/gorb1978/gaplogicwebsite` (branch `main`, no build command,
+      publish directory `.`) — 2026-08-15. Initial deploy from the setup wizard
+      published successfully (`main@f8171a9`). NOTE: this does NOT mean push-based
+      auto-deploy actually works yet — see the new Open item above, found
+      immediately after by testing it.

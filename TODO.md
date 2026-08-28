@@ -6,10 +6,12 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
-- [ ] Once Netlify is linked (see `HUMAN_TASKS.md`), push a trivial whitespace-only
-      change, confirm a new deploy appears in the Netlify dashboard, then revert it —
-      this was step 4 of the original CD-setup plan and never got verified because
-      the GitHub OAuth link is still blocked.
+- [ ] **Netlify is linked but push-triggered auto-deploy is currently BROKEN** — see
+      `HUMAN_TASKS.md` for the "unrecognized Git contributor" fix Josh needs to do.
+      Once he confirms it's fixed, re-run the same verification test (trivial
+      whitespace push → confirm a new deploy appears and actually publishes → revert)
+      to make sure it's really working before relying on it and dropping the
+      "remind Josh to drag-and-drop" habit.
 - [ ] Swap the `splash_logo.png` placeholder icons for GapSeizure and GapReintro once
       real app icons exist in their repos (`gapseizure/assets/images/`,
       `gapreintro/assets/images/` — both empty as of 2026-08-12).
@@ -38,6 +40,13 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] Netlify linked to GitHub (2026-08-15) — but see the new Open item above:
+      linking succeeded, push-triggered auto-deploy did not. Verification test used
+      a whitespace-only trailing-newline change to `index.html`
+      (commit `dc0d43f`, reverted in `a088113`) — the push itself succeeded on
+      GitHub, but Netlify's deploy of that commit failed with "Build blocked:
+      Unrecognized Git contributor," confirming the pipeline isn't actually live
+      yet. Site content was never affected since the blocked deploy never published.
 - [x] Added a "Coming Soon" label above the Download button for every app that
       still points to the `#` placeholder (GapVitals, GapCalc, GapRegister,
       GapJournal, GapBudget, GapFluid, GapWater, GapSeizure, GapReintro) — 2026-08-15,
