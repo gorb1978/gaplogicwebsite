@@ -2,21 +2,24 @@
 
 Plain static site (no build step) — `index.html`, `apps.html`, `privacy.html`, plus images.
 
-This is a git repo (`github.com/gorb1978/gaplogicwebsite`, `main` branch), and as of
-2026-08-15 it IS linked to Netlify for continuous deployment (Site config → Build &
-deploy → Repository shows "Deploys from GitHub"). **However, push-triggered
-auto-deploy is currently broken** — Netlify blocks deploys from pushed commits with
-an "unrecognized Git contributor" error (free-plan private-repo contributor limit).
-See `HUMAN_TASKS.md` for the fix Josh needs to make. Until he confirms it's fixed,
-**treat this exactly like the old unlinked state**: commits pushed to `main` do NOT
-reliably go live, so manual drag-and-drop into Netlify is still required after
-pushing. Don't assume CD works again without re-verifying (see `TODO.md`).
+This is a git repo (`github.com/gorb1978/gaplogicwebsite`, `main` branch) — **now a
+public repo** (was private; made public 2026-08-15 to work around a Netlify
+contributor-limit issue, see below). It IS linked to Netlify for continuous
+deployment and **auto-deploy on push to `main` is confirmed working** as of
+2026-08-15: pushing is enough, `https://gaplogicsoftware.com/` updates within
+seconds, no manual drag-and-drop needed anymore. (History: linking initially hit a
+"Netlify can't authorize — GitHub account flagged" block, then after that was
+resolved, push-triggered deploys hit an "unrecognized Git contributor" error from
+Netlify's free-plan private-repo limit; making the repo public fixed it. Both are
+resolved — see `HUMAN_TASKS.md` for the full story if push-deploys ever break again.)
+
+Since the repo is now public, don't commit anything sensitive to it (it never held
+secrets, just site HTML/images, but worth remembering now that it's world-readable).
 
 **Any edit to this site (adding a new app to `apps.html`, updating `privacy.html` for a
 new app, etc.) should be committed and pushed to `main` as a normal part of finishing
-that work** — don't leave it as an uncommitted local change. Also remind Josh he
-still needs to manually redeploy (drag-and-drop) until the contributor issue is fixed
-and auto-deploy is re-verified.
+that work** — that's now sufficient to go live; don't leave it as an uncommitted local
+change.
 
 **Check `TODO.md` and `HUMAN_TASKS.md` at the start of any session touching this
 repo, and update them (check off resolved items, add new ones) whenever you make a

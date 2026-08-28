@@ -6,12 +6,6 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
-- [ ] **Netlify is linked but push-triggered auto-deploy is currently BROKEN** — see
-      `HUMAN_TASKS.md` for the "unrecognized Git contributor" fix Josh needs to do.
-      Once he confirms it's fixed, re-run the same verification test (trivial
-      whitespace push → confirm a new deploy appears and actually publishes → revert)
-      to make sure it's really working before relying on it and dropping the
-      "remind Josh to drag-and-drop" habit.
 - [ ] Swap the `splash_logo.png` placeholder icons for GapSeizure and GapReintro once
       real app icons exist in their repos (`gapseizure/assets/images/`,
       `gapreintro/assets/images/` — both empty as of 2026-08-12).
@@ -40,13 +34,16 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
-- [x] Netlify linked to GitHub (2026-08-15) — but see the new Open item above:
-      linking succeeded, push-triggered auto-deploy did not. Verification test used
-      a whitespace-only trailing-newline change to `index.html`
-      (commit `dc0d43f`, reverted in `a088113`) — the push itself succeeded on
-      GitHub, but Netlify's deploy of that commit failed with "Build blocked:
-      Unrecognized Git contributor," confirming the pipeline isn't actually live
-      yet. Site content was never affected since the blocked deploy never published.
+- [x] **Netlify continuous deployment is fully working — 2026-08-15.** Linked
+      successfully, but the first push-triggered deploy attempt (`dc0d43f`) failed
+      with "Build blocked: Unrecognized Git contributor" (Netlify's free-plan
+      private-repo contributor limit — site content was never affected since that
+      deploy never published). Josh made the `gaplogicwebsite` repo public to fix
+      it. Re-verified with two more real pushes (`24f0565`, reverted by `5057b91`)
+      — both auto-deployed and published within seconds. Pushing to `main` is now
+      sufficient; manual Netlify drag-and-drop is no longer needed going forward.
+      If future pushes stop deploying, check `HUMAN_TASKS.md`'s resolved note for
+      what the failure mode looks like and how it was fixed last time.
 - [x] Added a "Coming Soon" label above the Download button for every app that
       still points to the `#` placeholder (GapVitals, GapCalc, GapRegister,
       GapJournal, GapBudget, GapFluid, GapWater, GapSeizure, GapReintro) — 2026-08-15,
