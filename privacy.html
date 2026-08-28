@@ -179,12 +179,36 @@
 
             <section class="legal-section">
                 <h2>1. Data Collection and Storage (100% Local Architecture)</h2>
-                <p>We do not collect, store, transmit, or share your personal, financial, or health data. Our applications are designed with a "local-only" architecture. All schedules, ledgers, notes, logs, and profiles you create are stored exclusively on your personal device using a local SQLite database. We do not operate cloud servers to process your private data, we do not require account creation, and we have absolutely no access to the information you enter into our apps.</p>
+                <p>We do not collect, store, transmit, or share your personal, financial, or health data. Our applications are designed with a "local-only" architecture. All schedules, ledgers, notes, logs, and profiles you create are stored on your personal device. Our apps have no ability to send that data to us or to anyone else. Android's own system backup may include app data in your personal Google Drive backup — see "Android system backup" below. We do not operate cloud servers to process your private data, we do not require account creation, and we have absolutely no access to the information you enter into our apps.</p>
 
                 <div class="inner-box">
                     <h4>Example: GapRegister's On-Device-Only Features</h4>
-                    <p>GapRegister's optional PIN app lock, full local backup &amp; restore, and receipt photo attachments all follow this same rule. Your PIN, your backup file, and any receipt photo you attach are stored exclusively on your device — never uploaded, synced to a server, or transmitted anywhere. GapRegister has no internet permission at all, so this isn't just a policy promise; the app is structurally unable to send this data anywhere even if it wanted to.</p>
+                    <p>GapRegister's optional PIN app lock, full local backup &amp; restore, and receipt photo attachments all follow this same rule. Your PIN is stored on your device as a salted hash, and we specifically exclude app settings from Android's system backup, so your PIN cannot leave your phone. Your ledger, your backup files and any receipt photos are stored on your device, and GapRegister declares no internet permission at all, so the app itself cannot upload or transmit them. If you have Android's system backup switched on, Android may include app data in your own Google Drive backup — see "Android system backup" below.</p>
                 </div>
+            </section>
+
+            <section class="legal-section">
+                <h2>Android system backup</h2>
+                <p>Android includes a built-in backup service that can copy an app's data into your own Google Drive. It is part of the operating system rather than part of our apps, and you control it.</p>
+
+                <div class="inner-box">
+                    <h4>Anything backed up goes to your own Google Drive account</h4>
+                    <p>It is not sent to GapLogic, and we have no access to it.</p>
+
+                    <h4>Android encrypts these backups</h4>
+                    <p>Using your device PIN, pattern or password.</p>
+
+                    <h4>You can turn it off at any time</h4>
+                    <p>In Android's Settings, usually under System, then Backup.</p>
+
+                    <h4>We deliberately exclude app settings</h4>
+                    <p>Including your GapRegister PIN, from this backup, so credentials never travel between devices.</p>
+
+                    <h4>We deliberately allow your records to be included</h4>
+                    <p>So you do not lose your history when you replace your phone.</p>
+                </div>
+
+                <p>Our apps still cannot transmit your data themselves. GapRegister, for example, declares no internet permission at all, which you can verify for yourself in Android's App info screen.</p>
             </section>
 
             <section class="legal-section">
