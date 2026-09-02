@@ -6,24 +6,6 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
-- [ ] **"Data never leaves the device" overstated-claim sweep found 2 more unfixed
-      instances on 2026-08-28** (same claim class as the GapRegister/GapVitals/
-      GapCalc/GapBudget fixes from earlier that session) — reported to Josh, NOT
-      fixed yet since he wants to review/decide, not have it silently changed:
-      - `apps.html` GapJournal Core Philosophy: "Your personal health data stays
-        securely locked in a local database on your device." — same absolute
-        storage-location claim, no Android-backup caveat.
-      - `apps.html` GapWater Core Philosophy: "...all without an account or a
-        single byte leaving your device." — same issue.
-      Also flagged as borderline (same rhetorical pattern, arguably still
-      accurate/different claim, Josh's call): GapCalc's "it cannot send your data
-      anywhere, not just promises not to" (a claim about the app's own capability,
-      not data's ultimate location); privacy.html's Section 1 heading "100% Local
-      Architecture"; and the various "100% Offline" badges/blurbs across
-      `apps.html`/`index.html` (GapCalc, GapJournal, GapBudget, GapWater,
-      GapSeizure, GapNotes) — these are about internet permission specifically,
-      a different and still-accurate claim, but worth Josh knowing they exist in
-      case he wants consistent qualifying language everywhere.
 - [ ] Swap the `splash_logo.png` placeholder icons for GapSeizure and GapReintro once
       real app icons exist in their repos (`gapseizure/assets/images/`,
       `gapreintro/assets/images/` — both empty as of 2026-08-12).
@@ -52,6 +34,16 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **Fixed the 2 remaining unfixed instances + the heading, from the 2026-08-28
+      sweep — same day.** `apps.html` GapJournal and GapWater Core Philosophy text
+      now carry the same Android-backup caveat as GapVitals/GapRegister/GapBudget.
+      `privacy.html`'s Section 1 heading reworded from "100% Local Architecture" to
+      "Local-First Architecture" so it doesn't contradict the corrected body text
+      right below it. Josh explicitly said to leave the borderline items alone —
+      the "100% Offline"/"no internet permission" badges and GapCalc's "it cannot
+      send your data anywhere" are a different, still-accurate claim (genuine lack
+      of network access) and should NOT be qualified with the backup caveat; don't
+      "fix" those in a future sweep.
 - [x] **Fixed overstated "never uploaded / exclusively on-device" privacy claims —
       2026-08-28.** `privacy.html`'s GapRegister callout rewritten using the exact
       wording from `pocketledger/LAUNCH_CHECKLIST.md` (Josh's instruction — don't
