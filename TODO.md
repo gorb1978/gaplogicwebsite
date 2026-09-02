@@ -6,6 +6,24 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
+- [ ] **"Data never leaves the device" overstated-claim sweep found 2 more unfixed
+      instances on 2026-08-28** (same claim class as the GapRegister/GapVitals/
+      GapCalc/GapBudget fixes from earlier that session) — reported to Josh, NOT
+      fixed yet since he wants to review/decide, not have it silently changed:
+      - `apps.html` GapJournal Core Philosophy: "Your personal health data stays
+        securely locked in a local database on your device." — same absolute
+        storage-location claim, no Android-backup caveat.
+      - `apps.html` GapWater Core Philosophy: "...all without an account or a
+        single byte leaving your device." — same issue.
+      Also flagged as borderline (same rhetorical pattern, arguably still
+      accurate/different claim, Josh's call): GapCalc's "it cannot send your data
+      anywhere, not just promises not to" (a claim about the app's own capability,
+      not data's ultimate location); privacy.html's Section 1 heading "100% Local
+      Architecture"; and the various "100% Offline" badges/blurbs across
+      `apps.html`/`index.html` (GapCalc, GapJournal, GapBudget, GapWater,
+      GapSeizure, GapNotes) — these are about internet permission specifically,
+      a different and still-accurate claim, but worth Josh knowing they exist in
+      case he wants consistent qualifying language everywhere.
 - [ ] Swap the `splash_logo.png` placeholder icons for GapSeizure and GapReintro once
       real app icons exist in their repos (`gapseizure/assets/images/`,
       `gapreintro/assets/images/` — both empty as of 2026-08-12).
@@ -34,6 +52,21 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **Fixed overstated "never uploaded / exclusively on-device" privacy claims —
+      2026-08-28.** `privacy.html`'s GapRegister callout rewritten using the exact
+      wording from `pocketledger/LAUNCH_CHECKLIST.md` (Josh's instruction — don't
+      improvise). Same claim class also found and fixed in `apps.html`'s GapVitals,
+      GapRegister, and GapBudget Core Philosophy text (all now note that Android's
+      own system backup may include app data in the user's own Google Drive backup,
+      and that this is Android's doing, not the app's). Confirmed live on
+      `gaplogicsoftware.com` via direct fetch after the Netlify auto-deploy
+      published (commit `9ea18b3`).
+- [x] Deleted `Testapps.html` — an unlinked, stale draft of `apps.html` (6 apps,
+      last touched only in the initial commit) that was still technically live at
+      `gaplogicsoftware.com/Testapps.html` since the publish directory is repo
+      root. It repeated the old internal "PocketLedger" codename and the same
+      overstated privacy claims. Josh confirmed: delete entirely, don't just fix
+      the wording.
 - [x] **Netlify continuous deployment is fully working — 2026-08-15.** Linked
       successfully, but the first push-triggered deploy attempt (`dc0d43f`) failed
       with "Build blocked: Unrecognized Git contributor" (Netlify's free-plan
