@@ -183,7 +183,7 @@
 
                 <div class="inner-box">
                     <h4>Example: GapRegister's On-Device-Only Features</h4>
-                    <p>GapRegister's optional PIN app lock, full local backup &amp; restore, and receipt photo attachments all follow this same rule. Your PIN is stored on your device as a salted hash, and we specifically exclude app settings from Android's system backup, so your PIN cannot leave your phone. Your ledger, your backup files and any receipt photos are stored on your device, and GapRegister declares no internet permission at all, so the app itself cannot upload or transmit them. If you have Android's system backup switched on, Android may include app data in your own Google Drive backup — see "Android system backup" below.</p>
+                    <p>GapRegister's optional PIN app lock, full local backup &amp; restore, and receipt photo attachments all follow this same rule. Every transaction, category and setting lives in a single database on this device, and GapRegister has no way to send it anywhere. If you have Android's own backup switched on, the system may include that database in your personal Google Drive backup — that is Android doing it, not us, it is encrypted with your device PIN, and you can turn it off in Android Settings. GapRegister's own optional app-lock PIN is separate from your device PIN: it is stored on your device as a salted hash, and we specifically exclude app settings from Android's backup, so that PIN cannot leave your phone.</p>
                 </div>
             </section>
 
