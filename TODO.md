@@ -34,6 +34,15 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **GapFluid privacy wording (2026-10-06, approved by Josh).** `privacy.html`:
+      "Last Updated" now October 2026; the Android-backup section says GapFluid is
+      the exception (Auto Backup and device transfer off, only the user's own
+      backup file leaves the phone); section 7 explains the Play Billing library's
+      Google diagnostics component, which has no network access in GapFluid. Only
+      GapFluid is named, since it's the only app whose merged manifest was checked.
+      The GapFluid card patch (free backup bullet on apps.html) is still parked
+      in `gapfluid/qa/apps_card_diff_20261005.txt` for Josh's review.
+
 - [x] **Fixed the 2 remaining unfixed instances + the heading, from the 2026-08-28
       sweep — same day.** `apps.html` GapJournal and GapWater Core Philosophy text
       now carry the same Android-backup caveat as GapVitals/GapRegister/GapBudget.
