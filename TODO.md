@@ -40,8 +40,8 @@ start of a session and update it (mark done / add new items) whenever you touch
       backup file leaves the phone); section 7 explains the Play Billing library's
       Google diagnostics component, which has no network access in GapFluid. Only
       GapFluid is named, since it's the only app whose merged manifest was checked.
-      The GapFluid card patch (free backup bullet on apps.html) is still parked
-      in `gapfluid/qa/apps_card_diff_20261005.txt` for Josh's review.
+      The GapFluid card's Free list gained "Free backup & restore" the same day
+      (approved by Josh after seeing the diff).
 
 - [x] **Fixed the 2 remaining unfixed instances + the heading, from the 2026-08-28
       sweep — same day.** `apps.html` GapJournal and GapWater Core Philosophy text
