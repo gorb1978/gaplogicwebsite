@@ -12,14 +12,12 @@ resolved or a new one comes up.
 - [ ] Decide what **GapNotes** actually is — there's a placeholder "Coming Soon"
       card/section for it on the site now, but no project folder or spec exists for
       it anywhere in `StudioProjects`.
-- [ ] **GapRegister's Play Store listing is still 404ing** as of 2026-08-15 (checked
-      directly, not just assumed) — propagation after the 2026-08-14 approval is
-      taking longer than a day. Once `https://play.google.com/store/apps/details?id=com.gaplogic.gapregister`
-      actually resolves, let Claude know so the `apps.html` Download button can be
-      switched from the `#` placeholder to the real link.
 
 ## Resolved
 
+- [x] GapRegister's and GapJournal's Play Store listings are live and their
+      `apps.html` Download buttons point to them — 2026-10-07 (supersedes the old
+      "GapRegister is still 404ing" item).
 - [x] GapBudget vs ClearBudget naming — confirmed 2026-08-12: site should say
       **GapBudget** (portfolio convention: every app name starts with "Gap"),
       regardless of what the `clearbudget` folder's own internal docs say.

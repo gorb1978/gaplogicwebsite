@@ -12,19 +12,14 @@ start of a session and update it (mark done / add new items) whenever you touch
 - [ ] Swap the `splash_logo.png` placeholder for GapNotes once that app actually
       exists (no folder for it anywhere in `StudioProjects` as of 2026-08-12 — it's
       a pure "coming soon" placeholder card right now).
-- [ ] **GapRegister's Play Store listing is still 404ing** as of 2026-08-15 (checked
-      `https://play.google.com/store/apps/details?id=com.gaplogic.gapregister`
-      directly — still not resolving, propagation after 2026-08-14 approval evidently
-      takes longer than a day). `apps.html`'s Download button still points to `#`.
-      **Re-check the URL next session** — once it resolves, swap the href in.
 - [ ] Update "Download on Google Play" `#` placeholder links to real Play Store URLs
-      as each remaining app (GapVitals, GapCalc, GapJournal, GapBudget, GapFluid,
-      GapWater, GapSeizure, GapReintro) actually goes live — check each folder's
-      `LAUNCH_CHECKLIST.md` for status before assuming "live." Spot-checked all 8
-      Play Store URLs directly on 2026-08-15 (triggered by GapRegister's launch) —
-      all still 404, none live yet. Worth re-checking periodically rather than only
-      trusting `LAUNCH_CHECKLIST.md` state, since GapRegister's own checklist wasn't
-      necessarily the trigger that caught its go-live either.
+      as each remaining app (GapVitals, GapCalc, GapBudget, GapFluid, GapWater,
+      GapSeizure, GapReintro) actually goes live — and remove its "Coming Soon" `<p>`
+      in the same edit. Check each folder's `LAUNCH_CHECKLIST.md` for status, then
+      verify the Play URL returns HTTP 200 with the app's title before switching
+      (curl with a browser User-Agent works; WebFetch can't read the page body).
+      Last checked all of these on 2026-08-15, all still 404 — **re-check them**,
+      since GapRegister and GapJournal have both gone live since then.
 - [ ] Periodically re-sweep each app folder's most recent .md docs (README, HANDOFF,
       TODO, HUMAN_TASKS, SPRINT_HISTORY, STORE_LISTING) against `apps.html` /
       `privacy.html` — app docs update faster than the site, so treat the site as
@@ -34,6 +29,16 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **GapRegister and GapJournal Download buttons are live — 2026-10-07 (Josh
+      approved the push).** Both Play URLs verified HTTP 200 with the right titles
+      ("GapRegister – Income & Expense", "Gap Journal: Sleep Diary") before
+      switching; "Coming Soon" removed from both cards, buttons use the same
+      `target="_blank" rel="noopener noreferrer"` markup as GapMed. GapJournal's
+      card also moved CSV export to Free and renamed the Pro item to "AI-Ready
+      Summary Export" (commit `60b285e`); GapRegister is `9f3c159`. Confirmed on the
+      live `gaplogicsoftware.com/apps.html`: three Play links (GapMed, GapRegister,
+      GapJournal), seven cards still "Coming Soon". This supersedes the old
+      "GapRegister is still 404ing" item from 2026-08-15, which was removed.
 - [x] **GapFluid privacy wording (2026-10-06, approved by Josh).** `privacy.html`:
       "Last Updated" now October 2026; the Android-backup section says GapFluid is
       the exception (Auto Backup and device transfer off, only the user's own
