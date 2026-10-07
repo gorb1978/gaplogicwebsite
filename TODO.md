@@ -13,13 +13,15 @@ start of a session and update it (mark done / add new items) whenever you touch
       exists (no folder for it anywhere in `StudioProjects` as of 2026-08-12 — it's
       a pure "coming soon" placeholder card right now).
 - [ ] Update "Download on Google Play" `#` placeholder links to real Play Store URLs
-      as each remaining app (GapVitals, GapCalc, GapBudget, GapFluid, GapWater,
-      GapSeizure, GapReintro) actually goes live — and remove its "Coming Soon" `<p>`
-      in the same edit. Check each folder's `LAUNCH_CHECKLIST.md` for status, then
-      verify the Play URL returns HTTP 200 with the app's title before switching
-      (curl with a browser User-Agent works; WebFetch can't read the page body).
-      Last checked all of these on 2026-08-15, all still 404 — **re-check them**,
-      since GapRegister and GapJournal have both gone live since then.
+      as each remaining app (GapVitals, GapBudget, GapFluid, GapWater, GapSeizure,
+      GapReintro) actually goes live — and remove its "Coming Soon" `<p>` in the same
+      edit. Check each folder's `LAUNCH_CHECKLIST.md` for status, then verify the
+      Play URL returns HTTP 200 with the app's title before switching (curl with a
+      browser User-Agent works; WebFetch can't read the page body). Last checked
+      these on 2026-08-15, all still 404 — **re-check them**, since GapRegister,
+      GapJournal and GapCalc have all gone live since then. Those six are exactly the
+      cards still carrying the "Coming Soon" label on the live site (GapNotes is
+      separate: it has a "Coming Soon" badge and no Download button).
 - [ ] Periodically re-sweep each app folder's most recent .md docs (README, HANDOFF,
       TODO, HUMAN_TASKS, SPRINT_HISTORY, STORE_LISTING) against `apps.html` /
       `privacy.html` — app docs update faster than the site, so treat the site as
@@ -29,6 +31,12 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **GapCalc Download button is live — 2026-10-07 (app is on Play at 1.0.12).**
+      Play URL verified HTTP 200 with the title "GapCalc - Apps on Google Play"
+      before switching; "Coming Soon" removed, same markup as the other live
+      buttons (commit `a30eadd`). Confirmed on the live `apps.html`: four Play links
+      (GapMed, GapRegister, GapJournal, GapCalc), six cards still "Coming Soon".
+      The GapCalc card's feature copy was not touched in this change.
 - [x] **GapRegister and GapJournal Download buttons are live — 2026-10-07 (Josh
       approved the push).** Both Play URLs verified HTTP 200 with the right titles
       ("GapRegister – Income & Expense", "Gap Journal: Sleep Diary") before
