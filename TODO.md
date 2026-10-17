@@ -6,6 +6,8 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
+- [ ] GapLock has no `apps.html` card yet - add it at its P9 (website) phase with
+      the real icon once the art exists (GapLock repo, `HUMAN_TASKS.md` #7).
 - [ ] Swap the `splash_logo.png` placeholder icons for GapSeizure and GapReintro once
       real app icons exist in their repos (`gapseizure/assets/images/`,
       `gapreintro/assets/images/` — both empty as of 2026-08-12).
@@ -117,3 +119,9 @@ start of a session and update it (mark done / add new items) whenever you touch
 - IAP product IDs in several apps intentionally keep legacy/old-name prefixes
   (e.g. GapJournal's IAPs use `com.gaplogic.sleepdraft.*`) — that's deliberate,
   not a bug, don't "fix" it.
+
+## Done
+
+- [x] 2026-10-17: GapLock added to `privacy.html` (intro list, permissions box in
+      section 1, backup exception, section 5 app-locking limits line, section 7
+      billing line, children's privacy). Approved by Josh in Cowork.
