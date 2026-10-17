@@ -33,6 +33,9 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] 2026-10-17: GapLock added to `privacy.html` (intro list, permissions box in
+      section 1, backup exception, section 5 app-locking limits line, section 7
+      billing line, children's privacy). Approved by Josh in Cowork.
 - [x] **GapCalc Download button is live — 2026-10-07 (app is on Play at 1.0.12).**
       Play URL verified HTTP 200 with the title "GapCalc - Apps on Google Play"
       before switching; "Coming Soon" removed, same markup as the other live
@@ -119,9 +122,3 @@ start of a session and update it (mark done / add new items) whenever you touch
 - IAP product IDs in several apps intentionally keep legacy/old-name prefixes
   (e.g. GapJournal's IAPs use `com.gaplogic.sleepdraft.*`) — that's deliberate,
   not a bug, don't "fix" it.
-
-## Done
-
-- [x] 2026-10-17: GapLock added to `privacy.html` (intro list, permissions box in
-      section 1, backup exception, section 5 app-locking limits line, section 7
-      billing line, children's privacy). Approved by Josh in Cowork.
