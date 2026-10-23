@@ -196,6 +196,15 @@
                     <p><strong>Your PIN, pattern, security answer and recovery code</strong> are never stored as you typed them. Each is stored on your device as a salted hash, encrypted with a key held by Android's Keystore (in secure hardware on phones that have it). If you forget your PIN, recovery happens entirely on your phone; there is no account or email reset, and we cannot reset it for you.</p>
                     <p><strong>Fingerprint or face unlock</strong>, if you turn it on, is handled by Android itself. GapLock never receives or stores your fingerprint or face data; Android only tells it whether the check succeeded.</p>
                 </div>
+
+                <div class="inner-box">
+                    <h4>GapSeizure: What It Keeps and Where</h4>
+                    <p>GapSeizure is a seizure and epilepsy diary. Your seizure log, rescue doses, VNS/RNS swipes, medications, dose history, triggers, notes and doctor questions are kept in a database on your phone. There is no GapSeizure account and no GapSeizure server.</p>
+                    <p><strong>Notifications</strong> are used only for the medication reminders you set. Android may ask you to allow them; GapSeizure works without them, it just can't remind you. Reminders are scheduled on your phone and are put back after a restart, an app update or a time-zone change.</p>
+                    <p><strong>Pill photos</strong> (optional, Pro) are taken with your camera or picked with Android's photo picker, and a copy is kept in GapSeizure's own storage on your phone. GapSeizure does not ask for access to your photo library.</p>
+                    <p><strong>Backups and reports</strong> are files you create yourself: a backup file, a PDF report or a CSV export, saved or shared through Android's own share sheet or file picker to the place you choose. GapLogic never receives them. Anything you share is then handled by the app you share it to.</p>
+                    <p><strong>Your purchase</strong> of GapSeizure Pro is handled by Google Play. Each time it starts, GapSeizure asks Google Play which purchases your Play account owns, so Pro comes back after a reinstall without tapping Restore. If a purchase is refunded, Pro is turned off only after Google Play has said twice, at least a day apart, that the account no longer owns it; if Play can't be reached, nothing changes.</p>
+                </div>
             </section>
 
             <section class="legal-section">
@@ -287,7 +296,7 @@
 
             <section class="legal-section">
                 <h2>7. Third-Party Services and Tracking</h2>
-                <p>Because our apps run locally and offline, we don't add any tracking, advertising or analytics SDKs, and nothing in them harvests or sells your data. Google Play's own billing library, which every app that sells through Google Play must include, contains a Google diagnostics component. In GapFluid and GapLock it has no network access and cannot send anything. Your usage remains private to your device.</p>
+                <p>Because our apps run locally and offline, we don't add any tracking, advertising or analytics SDKs, and nothing in them harvests or sells your data. Google Play's own billing library, which every app that sells through Google Play must include, contains a Google diagnostics component. In GapFluid, GapLock and GapSeizure it has no network access and cannot send anything. Your usage remains private to your device.</p>
             </section>
 
             <section class="legal-section">
