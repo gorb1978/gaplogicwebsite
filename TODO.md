@@ -6,24 +6,35 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
-- [ ] GapLock has no `apps.html` card yet - add it at its P9 (website) phase with
-      the real icon once the art exists (GapLock repo, `HUMAN_TASKS.md` #7).
-- [ ] Swap the `splash_logo.png` placeholder icons for GapSeizure and GapReintro once
-      real app icons exist in their repos (`gapseizure/assets/images/`,
-      `gapreintro/assets/images/` — both empty as of 2026-08-12).
+- [ ] **GapApprentice's "no internet permission" lines depend on one open check.**
+      D1(b) passed on Play's APK for versions 1 and 2 (0 INTERNET, only BILLING),
+      but its docs still list the `dumpsys package` check on a real Play Store
+      install as open, and say to pull the claim if it ever shows INTERNET. The
+      lines on this site: `privacy.html` (the GapApprentice box in section 1 and
+      the section 7 billing sentence) and the `apps.html` card's Core Philosophy.
+      Re-check `GapApprentice/STATUS.md` for that result, and re-run the whole
+      claim for any later version.
+- [ ] Two drafts in `GapApprentice/PRIVACY_POLICY_DRAFT.md` were NOT applied
+      (they weren't in Josh's 2026-10-29 brief): §3, an hour-target disclaimer
+      paragraph for "4. User Responsibility & Accuracy", and §4's refund paragraph
+      for section 6 (the refund rule is already described inside the GapApprentice
+      box in section 1). Ask Josh whether he wants §3 added; the app's own docs
+      call the hour targets its biggest risk.
 - [ ] Swap the `splash_logo.png` placeholder for GapNotes once that app actually
       exists (no folder for it anywhere in `StudioProjects` as of 2026-08-12 — it's
       a pure "coming soon" placeholder card right now).
 - [ ] Update "Download on Google Play" `#` placeholder links to real Play Store URLs
-      as each remaining app (GapVitals, GapBudget, GapFluid, GapWater, GapSeizure,
-      GapReintro) actually goes live — and remove its "Coming Soon" `<p>` in the same
-      edit. Check each folder's `LAUNCH_CHECKLIST.md` for status, then verify the
-      Play URL returns HTTP 200 with the app's title before switching (curl with a
-      browser User-Agent works; WebFetch can't read the page body). Last checked
-      these on 2026-08-15, all still 404 — **re-check them**, since GapRegister,
-      GapJournal and GapCalc have all gone live since then. Those six are exactly the
-      cards still carrying the "Coming Soon" label on the live site (GapNotes is
-      separate: it has a "Coming Soon" badge and no Download button).
+      as each remaining app (GapVitals, GapBudget, GapWater, GapSeizure, GapReintro,
+      GapLock, GapApprentice) actually goes live — and remove its "Coming Soon" `<p>`
+      in the same edit. As of 2026-10-29, GapWater, GapSeizure, GapReintro,
+      GapApprentice and GapLock are on closed/internal testing only (per Josh);
+      GapVitals and GapBudget have not been checked since 2026-08-15 (404 then).
+      Check each folder's `LAUNCH_CHECKLIST.md`/`STATUS.md`, then verify the Play URL
+      returns HTTP 200 with the app's title before switching (curl with a browser
+      User-Agent works; WebFetch can't read the page body). These seven are exactly
+      the cards carrying the "Coming Soon" label on the live site (GapNotes is
+      separate: it has a "Coming Soon" badge and no Download button). GapFluid,
+      GapMed, GapCalc, GapRegister and GapJournal already have live links.
 - [ ] Periodically re-sweep each app folder's most recent .md docs (README, HANDOFF,
       TODO, HUMAN_TASKS, SPRINT_HISTORY, STORE_LISTING) against `apps.html` /
       `privacy.html` — app docs update faster than the site, so treat the site as
@@ -33,6 +44,51 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **2026-10-29 (approved by Josh in Cowork): GapApprentice on the site, new
+      cards, videos, icons.** Commits `5caa043` (privacy, pushed first because it
+      was urgent) and `3b12615` (everything else); both confirmed live on
+      gaplogicsoftware.com the same day.
+      - `privacy.html`: GapApprentice added to the intro list; a section 1 box
+        (what it keeps, permissions = no internet permission and only Google Play
+        billing, backups and exports, the refund rule); a backup-exception
+        paragraph (allowBackup=false, every cloud-backup and device-transfer domain
+        excluded, only the user's own backup file leaves the phone); the billing
+        diagnostics sentence in section 7; "intended for people aged 18 and over" in
+        children's privacy (the app's own draft said "unchanged", Josh's brief
+        listed children's privacy, so this one sentence is the only addition there;
+        it matches its Play target audience of 18+). Facts were checked against the
+        app's manifest, backup rules, `STATUS.md` (D1(b) PASS 2026-10-23 on version
+        1 and 2026-10-27 on version 2), `PLAY_CONSOLE_ANSWERS.md` and
+        `lib/services/pro_ownership.dart`, not just the brief.
+      - `apps.html` + `index.html`: new GapApprentice card (Pro $3.99, listing
+        copy, includes the hour-targets-are-a-starting-point caution) and GapLock
+        card (draft `ab47f6a` revalidated against GapLock's approved listing text:
+        $2.99 Pro, no INTERNET, backup off; used its real icon instead of the
+        placeholder; the local `gaplock-card` branch is now superseded). Both
+        "Coming Soon", no Play link. Home-page cards added for both.
+      - Videos (YouTube embeds, GapMed's markup): GapRegister replaced (the old id
+        `Ie5pctdzmXk` went private, returns 403), plus GapFluid, GapWater,
+        GapReintro, GapSeizure and GapApprentice added. All six ids returned 200 on
+        YouTube oEmbed with the right titles, and the players were seen rendering
+        on the live page.
+      - Icons, resized to 256 px (web size, like GapFluid's): GapRegister and
+        GapCalc (sparkle removed, from `design/store/*_no_sparkle.png`), GapWater
+        (the newer clean store icon in `assets/images/app_icon_512.png`; it has no
+        `design/store` icon), GapSeizure (replaces `splash_logo.png`; also fixed on
+        its home card), GapApprentice and GapLock (new). GapReintro's home card
+        also switched from `splash_logo.png` to its real icon. Left unchanged
+        because they match or have no newer file: GapFluid (same image), GapReintro
+        (identical), GapJournal (repo icon is byte-identical to the site copy),
+        GapMed (no store icon file in its repo; its `assets/icon.png` is the old
+        design, byte-identical to `Gap Med App Icon_old.png`, so the site's newer
+        icon was kept).
+      - Not touched, noticed: five unreferenced files still sit in the repo root
+        and are publicly reachable: `Gap Calc App Icon_old.png` (3.8 MB),
+        `Gap Med App Icon_old.png` (1.4 MB), two `Gemini_Generated_Image_*.png`
+        (5.2-5.5 MB each) and `gemini-svg.svg`. The same kind of cleanup as the
+        `Testapps.html` deletion; Josh's call. Separately, the GapMed (3.8 MB),
+        GapBudget (4.6 MB), GapVitals (1.3 MB) and GapJournal (0.9 MB) card icons
+        are still the old full-size originals; they could be web-sized like the rest.
 - [x] 2026-10-17: GapLock added to `privacy.html` (intro list, permissions box in
       section 1, backup exception, section 5 app-locking limits line, section 7
       billing line, children's privacy). Approved by Josh in Cowork.
