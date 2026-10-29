@@ -6,14 +6,6 @@ resolved or a new one comes up.
 
 ## Open
 
-- [ ] **Decide whether to delete the unused image files in the site's repo root:**
-      `Gap Calc App Icon_old.png`, `Gap Med App Icon_old.png`, the two
-      `Gemini_Generated_Image_*.png` files and `gemini-svg.svg`. Nothing on the site
-      uses them, but they're publicly reachable and about 15 MB together. Say "delete
-      them" and Claude will (they stay in git history).
-- [ ] **Decide whether to add GapApprentice's hour-target disclaimer** (its
-      `PRIVACY_POLICY_DRAFT.md` §3) to `privacy.html`'s "4. User Responsibility &
-      Accuracy". It wasn't in the 2026-10-29 brief, so it was left out.
 - [ ] **When each app reaches production, tell Claude** so its card's "Coming Soon"
       label and `#` link can be switched to the Play link: GapWater, GapSeizure,
       GapReintro, GapApprentice, GapLock (all closed/internal testing now), plus
@@ -24,6 +16,16 @@ resolved or a new one comes up.
 
 ## Resolved
 
+- [x] 2026-10-29 (Josh in Cowork): GapApprentice's hour-target disclaimer added to
+      `privacy.html` section 4 (`56897fd`), and the five unused root files deleted
+      (below). The disclaimer uses the end-card wording ("GapApprentice is a
+      record-keeping tool. Confirm hour requirements with your program or licensing
+      board."), not the longer paragraph in the app's draft; say so if you want the
+      longer one instead.
+- [x] 2026-10-29: deleted the five unused files from the site's repo root (about
+      15 MB, publicly reachable): `Gap Calc App Icon_old.png`,
+      `Gap Med App Icon_old.png`, both `Gemini_Generated_Image_*.png` and
+      `gemini-svg.svg`. They stay in git history if one is ever needed.
 - [x] Real icons for **GapSeizure** and **GapReintro** now exist in their repos and
       are on the site (replacing the splash-logo placeholder) — 2026-10-29. GapLock
       and GapApprentice cards use their real icons too.

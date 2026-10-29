@@ -14,12 +14,14 @@ start of a session and update it (mark done / add new items) whenever you touch
       the section 7 billing sentence) and the `apps.html` card's Core Philosophy.
       Re-check `GapApprentice/STATUS.md` for that result, and re-run the whole
       claim for any later version.
-- [ ] Two drafts in `GapApprentice/PRIVACY_POLICY_DRAFT.md` were NOT applied
-      (they weren't in Josh's 2026-10-29 brief): §3, an hour-target disclaimer
-      paragraph for "4. User Responsibility & Accuracy", and §4's refund paragraph
-      for section 6 (the refund rule is already described inside the GapApprentice
-      box in section 1). Ask Josh whether he wants §3 added; the app's own docs
-      call the hour targets its biggest risk.
+- [ ] `GapApprentice/PRIVACY_POLICY_DRAFT.md` §4 (a refund paragraph for section 6)
+      was not applied; the refund rule is already described inside the GapApprentice
+      box in section 1, so it would be a duplicate. §3 (the hour-target disclaimer)
+      is now in section 4, but with the shorter end-card wording rather than the
+      draft's longer paragraph (see Recently resolved). If Josh wants the longer
+      text, it adds the 4,000 to 16,000+ hour range, the federal 8,000-hour preset
+      baseline and a "GapLogic is not responsible for a submission based on a preset
+      you did not confirm" sentence.
 - [ ] Swap the `splash_logo.png` placeholder for GapNotes once that app actually
       exists (no folder for it anywhere in `StudioProjects` as of 2026-08-12 — it's
       a pure "coming soon" placeholder card right now).
@@ -44,6 +46,17 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **2026-10-29 (approved by Josh in Cowork): hour-target disclaimer and root
+      cleanup.** `56897fd`: `privacy.html` section 4 gained "**GapApprentice Hour
+      Targets:** GapApprentice is a record-keeping tool. Confirm hour requirements
+      with your program or licensing board." (the wording approved for its video end
+      card, `GapApprentice/design/video/script.md`). The no-internet lines stay, as
+      Josh said (D1(b) PASS on Play's APK for vc1 and vc2). Then the five unused
+      root files were removed with `git rm` after re-checking that no site file
+      referenced them (the only other hit anywhere in StudioProjects was a local
+      Downloads path in a GapJournal QA note): `Gap Calc App Icon_old.png`,
+      `Gap Med App Icon_old.png`, both `Gemini_Generated_Image_*.png`,
+      `gemini-svg.svg`.
 - [x] **2026-10-29 (approved by Josh in Cowork): GapApprentice on the site, new
       cards, videos, icons.** Commits `5caa043` (privacy, pushed first because it
       was urgent) and `3b12615` (everything else); both confirmed live on
@@ -82,11 +95,8 @@ start of a session and update it (mark done / add new items) whenever you touch
         GapMed (no store icon file in its repo; its `assets/icon.png` is the old
         design, byte-identical to `Gap Med App Icon_old.png`, so the site's newer
         icon was kept).
-      - Not touched, noticed: five unreferenced files still sit in the repo root
-        and are publicly reachable: `Gap Calc App Icon_old.png` (3.8 MB),
-        `Gap Med App Icon_old.png` (1.4 MB), two `Gemini_Generated_Image_*.png`
-        (5.2-5.5 MB each) and `gemini-svg.svg`. The same kind of cleanup as the
-        `Testapps.html` deletion; Josh's call. Separately, the GapMed (3.8 MB),
+      - Noticed then, since removed (see the entry above): five unreferenced
+        files in the repo root. Still open: the GapMed (3.8 MB),
         GapBudget (4.6 MB), GapVitals (1.3 MB) and GapJournal (0.9 MB) card icons
         are still the old full-size originals; they could be web-sized like the rest.
 - [x] 2026-10-17: GapLock added to `privacy.html` (intro list, permissions box in
