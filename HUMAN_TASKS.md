@@ -8,8 +8,8 @@ resolved or a new one comes up.
 
 - [ ] **When each app reaches production, tell Claude** so its card's "Coming Soon"
       label and `#` link can be switched to the Play link: GapWater, GapSeizure,
-      GapReintro, GapApprentice, GapLock (all closed/internal testing now), plus
-      GapVitals and GapBudget.
+      GapReintro, GapLock (closed/internal testing as of 2026-10-29), plus
+      GapVitals and GapBudget. (GapApprentice went live 2026-11-04 and is done.)
 - [ ] Decide what **GapNotes** actually is — there's a placeholder "Coming Soon"
       card/section for it on the site now, but no project folder or spec exists for
       it anywhere in `StudioProjects`.

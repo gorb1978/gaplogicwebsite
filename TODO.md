@@ -27,16 +27,16 @@ start of a session and update it (mark done / add new items) whenever you touch
       a pure "coming soon" placeholder card right now).
 - [ ] Update "Download on Google Play" `#` placeholder links to real Play Store URLs
       as each remaining app (GapVitals, GapBudget, GapWater, GapSeizure, GapReintro,
-      GapLock, GapApprentice) actually goes live — and remove its "Coming Soon" `<p>`
-      in the same edit. As of 2026-10-29, GapWater, GapSeizure, GapReintro,
-      GapApprentice and GapLock are on closed/internal testing only (per Josh);
-      GapVitals and GapBudget have not been checked since 2026-08-15 (404 then).
-      Check each folder's `LAUNCH_CHECKLIST.md`/`STATUS.md`, then verify the Play URL
-      returns HTTP 200 with the app's title before switching (curl with a browser
-      User-Agent works; WebFetch can't read the page body). These seven are exactly
-      the cards carrying the "Coming Soon" label on the live site (GapNotes is
-      separate: it has a "Coming Soon" badge and no Download button). GapFluid,
-      GapMed, GapCalc, GapRegister and GapJournal already have live links.
+      GapLock) actually goes live — and remove its "Coming Soon" `<p>` in the same
+      edit. As of 2026-10-29, GapWater, GapSeizure, GapReintro and GapLock were on
+      closed/internal testing only (per Josh); GapVitals and GapBudget have not been
+      checked since 2026-08-15 (404 then). Check each folder's
+      `LAUNCH_CHECKLIST.md`/`STATUS.md`, then verify the Play URL returns HTTP 200
+      with the app's title before switching (curl with a browser User-Agent works;
+      WebFetch can't read the page body). These six are exactly the cards carrying
+      the "Coming Soon" label on the live site (GapNotes is separate: it has a
+      "Coming Soon" badge and no Download button). GapFluid, GapMed, GapCalc,
+      GapRegister, GapJournal and GapApprentice already have live links.
 - [ ] Periodically re-sweep each app folder's most recent .md docs (README, HANDOFF,
       TODO, HUMAN_TASKS, SPRINT_HISTORY, STORE_LISTING) against `apps.html` /
       `privacy.html` — app docs update faster than the site, so treat the site as
@@ -46,6 +46,16 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **2026-11-04 (Josh approved the push): GapApprentice is live on Google Play.**
+      Its `apps.html` card lost the "Coming Soon" label and its button now points to
+      `https://play.google.com/store/apps/details?id=com.gaplogic.gapapprentice`,
+      same markup as GapRegister/GapJournal/GapCalc (`target="_blank"
+      rel="noopener noreferrer"`). The Play URL was checked first: HTTP 200, title
+      "GapApprentice: Hour Logbook - Apps on Google Play". `privacy.html` already
+      listed GapApprentice (intro list, section 1 box, backup exception, section 4
+      hour targets, section 7, children's privacy), so nothing changed there. Six
+      cards still say "Coming Soon". The "no internet permission" check item at the
+      top of Open is still open: going live on Play doesn't close it.
 - [x] **2026-10-29 (approved by Josh in Cowork): hour-target disclaimer and root
       cleanup.** `56897fd`: `privacy.html` section 4 gained "**GapApprentice Hour
       Targets:** GapApprentice is a record-keeping tool. Confirm hour requirements
