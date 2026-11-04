@@ -10,6 +10,35 @@ resolved or a new one comes up.
       label and `#` link can be switched to the Play link: GapWater, GapSeizure,
       GapReintro, GapLock (closed/internal testing as of 2026-10-29), plus
       GapVitals and GapBudget. (GapApprentice went live 2026-11-04 and is done.)
+- [ ] **Play Store and listing-file wording that now disagrees with the site** (you
+      said you'd handle the Play listings yourself; this is just the list, found in the
+      2026-11-04 review). The site was changed to follow your rules, the listings
+      were not:
+      - **GapMed** (live): says "premium medical scheduling utility", "peace of mind"
+        and "perfect offline companion for managing chronic illness, post-surgery
+        recovery, ADHD medication schedules". It has no current `STORE_LISTING.md`
+        (retired as `STALE_STORE_LISTING.md`), so the live listing is the only copy.
+      - **GapJournal** (live): says the diary uses "the standard sleep-diary questions
+        used in CBT-I", calls the breathing tool "a guided breathing exercise to help
+        you relax before sleep", and names an export "PDF Health Record".
+      - **"Stays on your phone" wording**: GapSeizure ("Your diary stays on your
+        phone."), GapReintro ("so your diary stays on your phone unless you export or
+        back it up yourself") and GapApprentice (live: "kept in a database on your
+        phone; a copy only goes somewhere else when you export or back up a file")
+        still use it. GapVitals' and GapBudget's June `STORE_LISTING.md` files say
+        "No data ever leaves your phone" / "it never leaves your phone". GapLock's
+        listing says "Your PIN and your rules never leave your phone."
+      - **Prices**: the GapWater and GapReintro listings show no Pro price, so their
+        site cards now say "one-time unlock" instead of $3.99. If you want the price
+        on the cards, add it to the listings first.
+      - **"No internet permission" on the site**: removed for GapMed, GapRegister,
+        GapBudget and GapLock until each has a D1(b) PASS on its live build in
+        STATUS.md (run `tool/d1b_check.sh`-style check on Play's APK, then tell Claude).
+      - **Stale listing files**: GapVitals' (BodyLog, June) and GapBudget's
+        (ClearBudget, June) `STORE_LISTING.md` predate the Gap names and the current
+        apps; GapRegister's is from August (its live text is in
+        `tools/play-publish/full_description.txt`). Worth a refresh before those apps
+        ship, since the site only has these to compare against.
 - [ ] Decide what **GapNotes** actually is — there's a placeholder "Coming Soon"
       card/section for it on the site now, but no project folder or spec exists for
       it anywhere in `StudioProjects`.

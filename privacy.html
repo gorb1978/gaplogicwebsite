@@ -183,12 +183,12 @@
 
                 <div class="inner-box">
                     <h4>Example: GapRegister's On-Device-Only Features</h4>
-                    <p>GapRegister's optional PIN app lock, full local backup &amp; restore, and receipt photo attachments all follow this same rule. Every transaction, category and setting lives in a single database on this device, and GapRegister has no way to send it anywhere. If you have Android's own backup switched on, the system may include that database in your personal Google Drive backup — that is Android doing it, not us, it is encrypted with your device PIN, and you can turn it off in Android Settings. GapRegister's own optional app-lock PIN is separate from your device PIN: it is stored on your device as a salted hash, and we specifically exclude app settings from Android's backup, so that PIN cannot leave your phone.</p>
+                    <p>GapRegister's optional PIN app lock, full local backup &amp; restore, and receipt photo attachments all follow this same rule. Every transaction, category and setting lives in a single database on this device, and we never receive it. If you have Android's own backup switched on, the system may include that database in your personal Google Drive backup — that is Android doing it, not us, it is encrypted with your device PIN, and you can turn it off in Android Settings. GapRegister's own optional app-lock PIN is separate from your device PIN: it is stored on your device as a salted hash, and we specifically exclude app settings from Android's backup, so that PIN cannot leave your phone.</p>
                 </div>
 
                 <div class="inner-box">
                     <h4>GapLock: What Its Permissions Are Used For</h4>
-                    <p>GapLock is an app locker, so it needs a few Android permissions that other GapLogic apps don't. Each one is used on your phone only, and GapLock has no internet permission, so nothing it sees can leave your device.</p>
+                    <p>GapLock is an app locker, so it needs a few Android permissions that other GapLogic apps don't. Each one is used on your phone only, and GapLock has no accounts, no servers and no analytics.</p>
                     <p><strong>Usage access</strong> tells GapLock which app is on screen, so it knows when to show the lock. It never sees what you do inside any app, and it keeps no history of the apps you use. The only usage it stores is a running total of today's minutes for an app you have given a daily time budget, which it uses to know when that budget runs out.</p>
                     <p><strong>Display over other apps</strong> is what lets the lock screen appear on top of a protected app.</p>
                     <p><strong>The list of installed apps</strong> is read so you can pick which ones to lock. It is shown to you on the device and never sent anywhere.</p>
@@ -242,7 +242,7 @@
 
                 <p><strong>GapApprentice is also an exception:</strong> Android's automatic backup and device-to-device transfer are turned off. Your GapApprentice hours, programs, employers, supervisors and signatures are only ever copied off your phone if you save a backup file or export a PDF or CSV yourself (Settings &rarr; Backup &amp; Restore, or Export), to a place you choose. GapLogic never receives those files.</p>
 
-                <p>Our apps still cannot transmit your data themselves. GapRegister, for example, declares no internet permission at all, which you can verify for yourself in Android's App info screen.</p>
+                <p>GapLogic does not receive the data you enter into our apps, and we run no accounts or servers for them.</p>
             </section>
 
             <section class="legal-section">
@@ -307,7 +307,7 @@
 
             <section class="legal-section">
                 <h2>7. Third-Party Services and Tracking</h2>
-                <p>Because our apps run locally and offline, we don't add any tracking, advertising or analytics SDKs, and nothing in them harvests or sells your data. Google Play's own billing library, which every app that sells through Google Play must include, contains a Google diagnostics component. In GapFluid, GapLock, GapSeizure, GapReintro and GapApprentice it has no network access and cannot send anything. Your usage remains private to your device.</p>
+                <p>Because our apps run locally and offline, we don't add any tracking, advertising or analytics SDKs, and nothing in them harvests or sells your data. Google Play's own billing library, which every app that sells through Google Play must include, contains a Google diagnostics component. In GapFluid, GapLock, GapSeizure, GapReintro and GapApprentice it has no network access and cannot send anything. Your usage is not shared with any tracking or advertising service.</p>
             </section>
 
             <section class="legal-section">
@@ -323,7 +323,7 @@
 
             <section class="legal-section">
                 <h2>10. Children's Privacy</h2>
-                <p>Our Services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children. Because we do not collect data, any information a child inputs into the app remains strictly on their local device. GapLock is often set up by a parent on a phone or tablet a child uses. It collects nothing from anyone using that device; the apps it locks and the rules you set stay on the device. GapApprentice is intended for people aged 18 and over.</p>
+                <p>Our Services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children. Because we do not collect data, we have no access to any information a child enters into the app. GapLock is often set up by a parent on a phone or tablet a child uses. It collects nothing from anyone using that device; we never receive the list of apps it locks or the rules you set. GapApprentice is intended for people aged 18 and over.</p>
             </section>
 
             <section class="legal-section">

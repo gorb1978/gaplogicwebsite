@@ -6,14 +6,6 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
-- [ ] **GapApprentice's "no internet permission" lines depend on one open check.**
-      D1(b) passed on Play's APK for versions 1 and 2 (0 INTERNET, only BILLING),
-      but its docs still list the `dumpsys package` check on a real Play Store
-      install as open, and say to pull the claim if it ever shows INTERNET. The
-      lines on this site: `privacy.html` (the GapApprentice box in section 1 and
-      the section 7 billing sentence) and the `apps.html` card's Core Philosophy.
-      Re-check `GapApprentice/STATUS.md` for that result, and re-run the whole
-      claim for any later version.
 - [ ] `GapApprentice/PRIVACY_POLICY_DRAFT.md` §4 (a refund paragraph for section 6)
       was not applied; the refund rule is already described inside the GapApprentice
       box in section 1, so it would be a duplicate. §3 (the hour-target disclaimer)
@@ -46,6 +38,41 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **2026-11-04: all-site videos and text review against the app listings.
+      PREPARED, NOT YET PUSHED (waiting for Josh's OK on the diff; add the commit
+      hash here after the push).**
+      Josh approved 2026-11-04 with one change: "no internet permission" stays only
+      where STATUS.md shows a D1(b) PASS on that app's live/latest build. Kept: GapFluid
+      (vc3 live), GapApprentice (vc2 live), GapWater (vc3), GapSeizure (vc2), GapReintro
+      (vc4). Removed from the cards (and index/privacy where they appeared): GapMed (live
+      1.1.0 predates automatic protection being off; only the 1.1.1 AAB proof exists),
+      GapRegister (live 1.2.1 has an AAB manifest check but no D1(b) on Play's APK),
+      GapBudget (no build), GapLock (AAB scan only, no D1(b)). Re-add each when its
+      STATUS.md records a D1(b) PASS on the live build.
+      - Closed the GapApprentice "no internet permission" item: the real-phone check
+        passed on 2026-11-01 (Josh's S24 Ultra, vc2 from Closed testing; `dumpsys`
+        shows only BILLING plus the app's own DYNAMIC_RECEIVER permission; D1(b) PASS
+        on the delivered base.apk). So those lines on the site (privacy.html section
+        1 box and section 7 sentence, and the card) are backed by all three checks:
+        Play's APK for vc1 and vc2, and a real install. Re-run the claim for any
+        later version.
+      - Videos: GapMed `x3-u_7c9RuQ` (replaces the older `592kIqdtFIo`), GapCalc
+        `YLdAAQJbgto` and GapJournal `Ko6yCz3mwCk` added; the other six embeds were
+        already right. Every ID was checked against the app's STATUS.md and YouTube
+        oEmbed (all HTTP 200 with the right titles).
+      - Rules Josh set for this pass, to keep applying: no prices on a card unless
+        that app's listing shows one (GapMed, GapWater, GapReintro now say "one-time
+        unlock"); no "clinical"/"Consensus Sleep Diary"/"medical-grade"/"Smart Alarm"
+        on GapJournal (it's the "Wake-up Alarm"); GapMed is a reminder tool, not a
+        medical device, with no adherence or health-outcome claims; no "your data
+        stays on your phone"-type absolute location claims; "no internet permission"
+        or "the app itself can't send your data anywhere" only where that app's
+        listing says so (GapVitals' listing doesn't, so its card no longer says it).
+      - Where an app has no current `STORE_LISTING.md` (GapMed: retired as
+        `STALE_STORE_LISTING.md`; GapLock: listing text is in
+        `tools/play-publish/full_description.txt`), the live Play listing or that
+        file was used instead. GapVitals' and GapBudget's `STORE_LISTING.md` are
+        June-era (BodyLog / ClearBudget) and were used only for the rules above.
 - [x] **2026-11-04 (Josh approved the push): GapApprentice is live on Google Play.**
       Its `apps.html` card lost the "Coming Soon" label and its button now points to
       `https://play.google.com/store/apps/details?id=com.gaplogic.gapapprentice`,
