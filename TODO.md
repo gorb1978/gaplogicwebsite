@@ -38,6 +38,7 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Recently resolved
 
+- [x] **2026-11-06: GapApprentice card, "Board-ready PDF export" reworded to "A clean PDF you can share with your program or employer"** (Josh). No other "board-ready" wording exists on the site; never claim a board accepts the PDF.
 - [x] **2026-11-04: all-site videos and text review against the app listings.
       PREPARED, NOT YET PUSHED (waiting for Josh's OK on the diff; add the commit
       hash here after the push).**
