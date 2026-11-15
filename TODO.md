@@ -28,7 +28,7 @@ start of a session and update it (mark done / add new items) whenever you touch
       WebFetch can't read the page body). These six are exactly the cards carrying
       the "Coming Soon" label on the live site (GapNotes is separate: it has a
       "Coming Soon" badge and no Download button). GapFluid, GapMed, GapCalc,
-      GapRegister, GapJournal and GapApprentice already have live links.
+      GapRegister, GapJournal and GapApprentice already have live links. GapSeizure: live link added 2026-11-15 (vc3 on Production; Play URL HTTP 200, title "GapSeizure: Seizure Diary").
 - [ ] Periodically re-sweep each app folder's most recent .md docs (README, HANDOFF,
       TODO, HUMAN_TASKS, SPRINT_HISTORY, STORE_LISTING) against `apps.html` /
       `privacy.html` — app docs update faster than the site, so treat the site as
