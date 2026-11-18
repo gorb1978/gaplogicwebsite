@@ -6,6 +6,16 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
+- [ ] **GapVitals is dropped (Josh, 2026-11-18): remove its card.** `apps.html` still has
+      the `#gapvitals` section (and its Body Log icon) and `index.html` still has its
+      blurb card. Ask Josh before removing; then also drop the `apps.html#gapvitals`
+      link and decide whether to delete `Body Log App Icon.png`.
+- [ ] Live-list check 2026-11-18: live on Play = GapJournal, GapMed, GapCalc,
+      GapRegister, GapFluid, GapApprentice, GapWater, GapSeizure, GapReintro (all nine
+      cards carry a working Play link; the three newest return 200 with the right
+      title). Coming Soon = GapLock (Internal testing), GapBudget (restarting),
+      GapNotes. Only mismatch: the GapVitals card above.
+
 - [ ] `GapApprentice/PRIVACY_POLICY_DRAFT.md` §4 (a refund paragraph for section 6)
       was not applied; the refund rule is already described inside the GapApprentice
       box in section 1, so it would be a duplicate. §3 (the hour-target disclaimer)
