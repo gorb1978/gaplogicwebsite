@@ -6,15 +6,11 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
-- [ ] **GapVitals is dropped (Josh, 2026-11-18): remove its card.** `apps.html` still has
-      the `#gapvitals` section (and its Body Log icon) and `index.html` still has its
-      blurb card. Ask Josh before removing; then also drop the `apps.html#gapvitals`
-      link and decide whether to delete `Body Log App Icon.png`.
 - [ ] Live-list check 2026-11-18: live on Play = GapJournal, GapMed, GapCalc,
       GapRegister, GapFluid, GapApprentice, GapWater, GapSeizure, GapReintro (all nine
       cards carry a working Play link; the three newest return 200 with the right
       title). Coming Soon = GapLock (Internal testing), GapBudget (restarting),
-      GapNotes. Only mismatch: the GapVitals card above.
+      GapNotes. The GapVitals mismatch was fixed 2026-11-19 (removed, D-007).
 
 - [ ] `GapApprentice/PRIVACY_POLICY_DRAFT.md` §4 (a refund paragraph for section 6)
       was not applied; the refund rule is already described inside the GapApprentice
@@ -28,10 +24,10 @@ start of a session and update it (mark done / add new items) whenever you touch
       exists (no folder for it anywhere in `StudioProjects` as of 2026-08-12 — it's
       a pure "coming soon" placeholder card right now).
 - [ ] Update "Download on Google Play" `#` placeholder links to real Play Store URLs
-      as each remaining app (GapVitals, GapBudget, GapWater, GapSeizure, GapReintro,
+      as each remaining app (GapBudget, GapWater, GapSeizure, GapReintro,
       GapLock) actually goes live — and remove its "Coming Soon" `<p>` in the same
       edit. As of 2026-10-29, GapWater, GapSeizure, GapReintro and GapLock were on
-      closed/internal testing only (per Josh); GapVitals and GapBudget have not been
+      closed/internal testing only (per Josh); GapBudget has not been
       checked since 2026-08-15 (404 then). Check each folder's
       `LAUNCH_CHECKLIST.md`/`STATUS.md`, then verify the Play URL returns HTTP 200
       with the app's title before switching (curl with a browser User-Agent works;
@@ -47,6 +43,16 @@ start of a session and update it (mark done / add new items) whenever you touch
       shipped features missing from their site cards).
 
 ## Recently resolved
+
+- [x] **2026-11-19 (directive D-007, approved by Josh, privacy.html included): GapVitals
+      removed from the site.** `64de607`: the `apps.html` `#gapvitals` section, the
+      `index.html` home card (and its `apps.html#gapvitals` link), `Body Log App Icon.png`
+      (`git rm`; live URL now 404), and GapVitals from the two shared app lists in
+      `privacy.html` (intro list in the opening paragraph, health-services disclaimer).
+      `privacy.html` had no GapVitals-only box. Its "Last Updated: October 2026" line
+      was left as is (not asked for). Live check: all three pages HTTP 200, zero hits for
+      GapVitals / Body Log / bodylog, 12 app sections and 12 home cards. Remaining
+      mentions are only in these docs and `ADMIN_AGENT_PROMPT.md` (history / "dropped").
 
 - [x] **2026-11-06: GapApprentice card, "Board-ready PDF export" reworded to "A clean PDF you can share with your program or employer"** (Josh). No other "board-ready" wording exists on the site; never claim a board accepts the PDF.
 - [x] **2026-11-04: all-site videos and text review against the app listings.

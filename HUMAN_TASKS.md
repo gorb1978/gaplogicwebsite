@@ -9,7 +9,7 @@ resolved or a new one comes up.
 - [ ] **When each app reaches production, tell Claude** so its card's "Coming Soon"
       label and `#` link can be switched to the Play link: GapWater, GapSeizure,
       GapReintro, GapLock (closed/internal testing as of 2026-10-29), plus
-      GapVitals and GapBudget. (GapApprentice went live 2026-11-04 and is done.)
+      GapBudget (GapVitals was dropped; its card was removed 2026-11-19). (GapApprentice went live 2026-11-04 and is done.)
 - [ ] **Play Store and listing-file wording that now disagrees with the site** (you
       said you'd handle the Play listings yourself; this is just the list, found in the
       2026-11-04 review). The site was changed to follow your rules, the listings
