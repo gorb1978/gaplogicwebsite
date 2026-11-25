@@ -6,6 +6,12 @@ resolved or a new one comes up.
 
 ## Open
 
+- [ ] **Netlify did not publish the 2026-11-25 pushes** (`98cb338` GapOwe, `b82877c`
+      TODO). GitHub `main` has them; 34 minutes after the first push the live site was
+      still the 2026-11-19 version (icon 404). Netlify's and GitHub's status pages showed no
+      incident. If it is still old: Netlify > the site > Deploys, see whether the two
+      pushes are listed (blocked, failed, or missing) and press **Trigger deploy**
+      (Deploy site). If builds are paused or out of credits, that is the reason.
 - [ ] **When each app reaches production, tell Claude** so its card's "Coming Soon"
       label and `#` link can be switched to the Play link: GapWater, GapSeizure,
       GapReintro, GapLock (closed/internal testing as of 2026-10-29), plus

@@ -9,6 +9,8 @@ start of a session and update it (mark done / add new items) whenever you touch
 - [ ] **DEPLOY CHECK, 2026-11-25:** `98cb338` (GapOwe) reached GitHub `main` at 00:04 but
       was not live 9 minutes later (apps.html still the old page, icon 404). See if it
       is live; if not, it is Josh's Netlify step in `HUMAN_TASKS.md`.
+      Still not live at 00:41, also after a second push (`b82877c`). Once live: compare the
+      pages, tell GapOwe (OWNER_NOTES) P9 is done and close D-030. Do NOT add the card again.
 - [ ] GapOwe: when Josh says it is on Production, swap `#` for
       `https://play.google.com/store/apps/details?id=com.gaplogic.gapowe` (404 on
       2026-11-25), remove "Coming Soon", and re-check the listing text.
