@@ -6,6 +6,13 @@ start of a session and update it (mark done / add new items) whenever you touch
 
 ## Open
 
+- [ ] **DEPLOY CHECK, 2026-11-25:** `98cb338` (GapOwe) reached GitHub `main` at 00:04 but
+      was not live 9 minutes later (apps.html still the old page, icon 404). See if it
+      is live; if not, it is Josh's Netlify step in `HUMAN_TASKS.md`.
+- [ ] GapOwe: when Josh says it is on Production, swap `#` for
+      `https://play.google.com/store/apps/details?id=com.gaplogic.gapowe` (404 on
+      2026-11-25), remove "Coming Soon", and re-check the listing text.
+
 - [ ] Live-list check 2026-11-18: live on Play = GapJournal, GapMed, GapCalc,
       GapRegister, GapFluid, GapApprentice, GapWater, GapSeizure, GapReintro (all nine
       cards carry a working Play link; the three newest return 200 with the right
@@ -43,6 +50,16 @@ start of a session and update it (mark done / add new items) whenever you touch
       shipped features missing from their site cards).
 
 ## Recently resolved
+
+- [x] **2026-11-25 (directive D-030, approved by Josh, privacy section included): GapOwe
+      added to the site.** `98cb338`: `apps.html` `#gapowe` card (Coming Soon, `#` link,
+      video `87Rsv8zc3Ks`, unlisted on YouTube, oEmbed 200), home card on `index.html`,
+      `Gap Owe App Icon.png`, and in `privacy.html`: a GapOwe box in section 1, the app
+      list, an Android backup exception (allowBackup=false, data extraction rules exclude
+      all), the financial disclaimer, the section 7 network sentence, 18 and over in
+      section 10, and "Last Updated: November 2026". "No internet permission" is backed by
+      the Play-installed builds (vc1 `GapOwe/qa/p8_play_apk_check.md`, vc2
+      `GapOwe/qa/p8_phone_checks.md`: 0 INTERNET lines). Text follows GapOwe's Play listing.
 
 - [x] **2026-11-19 (directive D-007, approved by Josh, privacy.html included): GapVitals
       removed from the site.** `64de607`: the `apps.html` `#gapvitals` section, the
