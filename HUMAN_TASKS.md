@@ -12,6 +12,9 @@ resolved or a new one comes up.
       incident. If it is still old: Netlify > the site > Deploys, see whether the two
       pushes are listed (blocked, failed, or missing) and press **Trigger deploy**
       (Deploy site). If builds are paused or out of credits, that is the reason.
+      **Still not live on 2026-11-26 05:00** (more than a day later; Netlify posts no commit
+      status on GitHub at all, so check that the site is still linked to `gorb1978/gaplogicwebsite`
+      `main` and that auto-publishing is not locked/stopped).
 - [ ] **When each app reaches production, tell Claude** so its card's "Coming Soon"
       label and `#` link can be switched to the Play link: GapWater, GapSeizure,
       GapReintro, GapLock (closed/internal testing as of 2026-10-29), plus

@@ -11,6 +11,11 @@ start of a session and update it (mark done / add new items) whenever you touch
       is live; if not, it is Josh's Netlify step in `HUMAN_TASKS.md`.
       Still not live at 00:41, also after a second push (`b82877c`). Once live: compare the
       pages, tell GapOwe (OWNER_NOTES) P9 is done and close D-030. Do NOT add the card again.
+      **2026-11-26 05:00 (second D-030 run): still NOT live.** apps.html, privacy.html and
+      index.html return 200 but hold 0 GapOwe hits (repo: 7 / 11 / 3), `Gap%20Owe%20App%20Icon.png`
+      404, and GitHub shows no Netlify commit status for any push. D-030 was logged "cannot do"
+      (Josh's Netlify step). Once live: compare pages, write GapOwe OWNER_NOTES "P9 done" and add a
+      `done` row for D-030 to COWORK_DIRECTIVES_DONE.md.
 - [ ] GapOwe: when Josh says it is on Production, swap `#` for
       `https://play.google.com/store/apps/details?id=com.gaplogic.gapowe` (404 on
       2026-11-25), remove "Coming Soon", and re-check the listing text.
